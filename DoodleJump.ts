@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var myFunction = function() {
             if(jumpingUp) {
                 moveJumper()
-                stepsize = (counter * counter * 4)/100//x^2 * 2 -> Hyperbel
+                stepsize = (counter * counter * 4)/100//x^2 * 4 -> Hyperbel
                 counter -= 1
                 if(counter==0) jumpingUp = false //jumping up finished, falling down is next step
             }else{
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     jump()
                     return
                 }
-                stepsize = (counter * counter * 4) /100//x^2 * 2 -> Hyperbel
+                stepsize = (counter * counter * 4) /100//x^2 * 4 -> Hyperbel
                 counter -= 1
                 moveJumper()
             }
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 horizontalMovingSpeed = 6
                 return;
             }
-            horizontalMovingSpeed = (localCounter * localCounter * 4)/100//x^2 * 2 -> Hyperbel
+            horizontalMovingSpeed = (localCounter * localCounter * 4)/100//x^2 * 4 -> Hyperbel
             localCounter -= 1
             if(localCounter==0) {
                 standingStill = true
