@@ -1,0 +1,32 @@
+.grid {
+  width: 400px;
+  height: 600px;
+  background-image: url('background.png');
+  position: relative;
+  font-size: 100px;
+  text-align: center;
+}
+
+.doodler {
+  width: 50px;
+  height: 49px;
+  background-image: url('doodler-guy-small.png');
+  position: absolute;
+}
+
+.platform {
+  width: 85px;
+  height: 15px;
+  background-image: url('platform.png');
+  position: absolute;
+}
+
+#scoreParagraph{
+  color: #7c795d;
+  font-family: 'Trocchi', serif;
+  font-size: 45px;
+  left: 100px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 10px;
+}
