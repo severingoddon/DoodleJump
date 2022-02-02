@@ -226,8 +226,4 @@ document.addEventListener('DOMContentLoaded', () => {
     start()
     setInterval(movePlatforms,2)
     jump()
-
-
-
-
 })
