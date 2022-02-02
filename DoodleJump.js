@@ -1,3 +1,4 @@
+//@autor severin goddon
 document.addEventListener('DOMContentLoaded', function () {
     var grid = document.querySelector('.grid');
     var platforms = []; //store all visible platforms
@@ -6,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var movingLeft = false;
     var standingStill = true;
     var horizontalMovingSpeed = 6;
-    var cancelled;
+    var cancelled; //used to stop the fadeout function
     var doodlerBottom;
-    var platformMovementSpeed = 1;
-    var score = 0;
+    var platformMovementSpeed = 1; //vertical movement speed of the platforms
+    var score = 0; //total gamescore
     var DoodlePlatform = /** @class */ (function () {
         function DoodlePlatform(newPlatBottom) {
             this.left = Math.random() * 315;
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return Jumper;
     }());
     var jumper = new Jumper(125);
-    function createPlatform() {
+    function initializePlatforms() {
         for (var i = 0; i < 5; i++) {
             var platGap = 600 / 5;
             var newPlatBottom = 100 + i * platGap;
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     function start() {
-        createPlatform();
+        initializePlatforms();
         document.getElementById("scoreParagraph").textContent = "Score: " + score;
         //----------------------------handle keyboard input----------------------------
         window.addEventListener("keydown", function (event) {
@@ -78,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             event.preventDefault();
         }, true);
+        //---handle keyup events
         window.addEventListener("keyup", function (event) {
             if (event.defaultPrevented) {
                 return; // Do nothing if event already handled
@@ -102,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             event.preventDefault();
         }, true);
-        //--------------------------------------------------------
     }
     function movePlatforms() {
         if (jumper.bottom > 250) {
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (platform.bottom < 10) {
                     var firstPlatform = platforms[0].visualElement;
                     firstPlatform.classList.remove('platform');
+                    firstPlatform.parentNode.removeChild(firstPlatform);
                     platforms.shift();
                     var newPlatform = new DoodlePlatform(600);
                     platforms.push(newPlatform);
@@ -128,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var myFunction = function () {
             if (jumpingUp) {
                 moveJumper();
-                stepsize = (counter * counter * 4) / 100; //x^2 * 2 -> Hyperbel
+                stepsize = (counter * counter * 4) / 100; //x^2 * 4 -> Hyperbel
                 counter -= 1;
                 if (counter == 0)
                     jumpingUp = false; //jumping up finished, falling down is next step
@@ -141,15 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     jump();
                     return;
                 }
-                stepsize = (counter * counter * 4) / 100; //x^2 * 2 -> Hyperbel
+                stepsize = (counter * counter * 4) / 100; //x^2 * 4 -> Hyperbel
                 counter -= 1;
                 moveJumper();
-                //---comment out section below to let the jumper fall down
-                //if(counter == jumpingHeight*-1-2){ //bottom reached, jump up again
-                //  jumpingUp = true
-                //   counter = jumpingHeight
-                //}
-                //---end of fall section
             }
             setTimeout(myFunction, interval);
         };
@@ -163,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (!jumpingUp) {
             if (stepsize < 16)
-                jumper.bottom -= stepsize;
+                jumper.bottom -= stepsize; //max stepsize is 16 => the doodler won't increase it's speed permanently when falling
             else
                 jumper.bottom -= 16;
             var visual = jumper.visualElement;
@@ -191,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 horizontalMovingSpeed = 6;
                 return;
             }
-            horizontalMovingSpeed = (localCounter * localCounter * 4) / 100; //x^2 * 2 -> Hyperbel
+            horizontalMovingSpeed = (localCounter * localCounter * 4) / 100; //x^2 * 4 -> Hyperbel
             localCounter -= 1;
             if (localCounter == 0) {
                 standingStill = true;
@@ -207,13 +203,14 @@ document.addEventListener('DOMContentLoaded', function () {
             var platform = platforms_1[_i];
             if (jumper.bottom <= (platform.bottom + 20) &&
                 jumper.bottom >= (platform.bottom - 20) &&
-                jumper.left >= (platform.left - 10) &&
+                jumper.left + 20 >= (platform.left - 10) &&
                 jumper.left <= (platform.left + 85) &&
                 platform.bottom < 500)
                 return true;
         }
         return false;
     }
+    //start the game, activate the platform movement function and jump!
     start();
     setInterval(movePlatforms, 2);
     jump();

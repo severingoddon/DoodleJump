@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const jumper = new Jumper(125)
 
-    function createPlatform() {
+    function initializePlatforms() {
         for(let i =0; i < 5; i++) {
             let platGap = 600 / 5
             let newPlatBottom = 100 + i * platGap
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function start() {
-        createPlatform()
+        initializePlatforms()
         document.getElementById("scoreParagraph").textContent = "Score: "+score
 
         //----------------------------handle keyboard input----------------------------
@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (platform.bottom < 10) {
                     let firstPlatform = platforms[0].visualElement
                     firstPlatform.classList.remove('platform')
+                    firstPlatform.parentNode.removeChild(firstPlatform)
                     platforms.shift()
                     var newPlatform = new DoodlePlatform(600)
                     platforms.push(newPlatform)
@@ -171,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             visual.style.bottom = jumper.bottom + 'px'
         }
         if(!jumpingUp){
-            if(stepsize < 16) jumper.bottom -= stepsize
+            if(stepsize < 16) jumper.bottom -= stepsize //max stepsize is 16 => the doodler won't increase it's speed permanently when falling
             else jumper.bottom -= 16
             let visual = jumper.visualElement
             visual.style.bottom = jumper.bottom + 'px'
@@ -215,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let platform of platforms) {
             if (jumper.bottom <= (platform.bottom + 20) &&
                 jumper.bottom >= (platform.bottom - 20) &&
-                jumper.left >= (platform.left-10) &&
+                jumper.left + 20 >= (platform.left-10) &&
                 jumper.left <= (platform.left + 85) &&
                 platform.bottom < 500) return true
         }
