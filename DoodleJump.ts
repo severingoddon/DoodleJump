@@ -1,6 +1,12 @@
+
 //@autor severin goddon
 
+
+import {DoodlePlatform} from "./doodle-platform";
+
+
 document.addEventListener('DOMContentLoaded', () => {
+    var audio = new Audio('jump.mp3');
     const grid = document.querySelector('.grid')
     let platforms = [] //store all visible platforms
     let jumpingUp = true //sets if the doodler jumps up or down
@@ -150,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(counter==0) jumpingUp = false //jumping up finished, falling down is next step
             }else{
                 if(checkCollision()){
+                    audio.play()
                     score++
                     document.getElementById("scoreParagraph").textContent = "Score: "+ score
                     jumpingUp = true
@@ -227,4 +234,5 @@ document.addEventListener('DOMContentLoaded', () => {
     start()
     setInterval(movePlatforms,2)
     jump()
+
 })
