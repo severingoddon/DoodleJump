@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="game-over-screen"
+  style={Object {}}
+>
+  <div
+    className="game-over"
+  >
+    Game over!
+  </div>
+  <div
+    className="result-score"
+    data-testid="finalscore"
+  >
+    Your score is: 
+    1200
+  </div>
+</div>
+`;

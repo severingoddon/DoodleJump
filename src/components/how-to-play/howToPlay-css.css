@@ -1,0 +1,107 @@
+.howToPlay-screen{
+    background-image: url('../../resources/basicTheme/background.png');
+    width: 450px;
+    height: 700px;
+    top: 60px;
+    left:35%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.howToPlay-screen-dark{
+    background-image: url('../../resources/octiTheme/background.png');
+    width: 450px;
+    height: 700px;
+    top: 60px;
+    left:35%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#homeButton{
+    position: absolute;
+    top: 420px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.75rem;
+    font-family: "Comic Sans MS";
+}
+
+#homeButton-dark{
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 420px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.75rem;
+    font-family: "Comic Sans MS";
+}
+
+#homeButtonLink{
+    position: absolute;
+    left:90px;
+}
+
+#howToPlayTitle{
+    top: 60px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+}
+
+#howToPlayTitle-dark{
+    top: 60px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+.text{
+    font-size: 1.1rem;
+    font-family: "Comic Sans MS";
+}
+
+.text-with-img{
+    font-size: 1.1rem;
+    font-family: "Comic Sans MS";
+    max-width: 280px
+}
+
+#explanations{
+    position: absolute;
+    left: 40px;
+    top: 180px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.explanation-wrappers{
+    display: flex;
+    flex-direction: row;
+}
+
+#coin{
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background-image: url("../../resources/basicTheme/coin.png");
+}
+
+#bomb{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../resources/basicTheme/bomb.png");
+}

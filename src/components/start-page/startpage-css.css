@@ -1,0 +1,197 @@
+.startScreen{
+    background-image: url('../../resources/basicTheme/background.png');
+    width: 450px;
+    height: 700px;
+    top: 60px;
+    left:35%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startScreen-dark{
+    background-image: url('../../resources/octiTheme/background.png');
+    width: 450px;
+    height: 700px;
+    top: 60px;
+    left:35%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.difficulty{
+    font-family: "Comic Sans MS";
+    position: absolute;
+    bottom: 50px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    height: 50px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.difficulty-dark{
+    background-color: cornflowerblue;
+    font-family: "Comic Sans MS";
+    position: absolute;
+    bottom: 50px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    height: 50px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.links{
+    position: absolute;
+    left:120px;
+}
+
+.links-dark{
+    position: absolute;
+    left:120px;
+    color: black;
+}
+
+.themeButtons{
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: "Comic Sans MS";
+}
+
+.themeButtons-dark{
+    margin: 5px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: "Comic Sans MS";
+}
+
+#themeButtonsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 20px;
+    right:10px;
+    position: absolute;
+}
+
+
+#playButton{
+    position: absolute;
+    top: 320px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.75rem;
+    font-family: "Comic Sans MS";
+}
+
+#playButtonDark{
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 320px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.75rem;
+    font-family: "Comic Sans MS";
+}
+
+#howToPlayButton{
+    position: absolute;
+    top: 395px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS";
+}
+
+#howToPlayButtonDark{
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 395px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS";
+}
+
+#highscoreOverviewButton{
+    position: absolute;
+    top: 470px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS";
+}
+#highscoreOverviewButtonDark{
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 470px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS";
+}
+
+
+
+#gameTitle{
+    top: 60px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+}
+
+#gameTitle-dark{
+    top: 60px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+
+#authors{
+    top: 120px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+}
+
+#authors-dark{
+    top: 120px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+#doodler{
+    transform: rotate(-20deg);
+    position: absolute;
+    top:220px;
+    left: 140px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../resources/basicTheme/doodler-guy-small.png");
+}
+
+#doodler-dark{
+    transform: rotate(-20deg);
+    position: absolute;
+    top:220px;
+    left: 140px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../resources/octiTheme/doodler-guy-small.png");
+}

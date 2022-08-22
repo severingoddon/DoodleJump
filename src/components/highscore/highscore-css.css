@@ -1,0 +1,10 @@
+.highscore {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Comic Sans MS";
+    font-size: 1.5rem;
+    color: wheat;
+    width: 25%;
+    z-index: 1;
+}

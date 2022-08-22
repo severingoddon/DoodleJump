@@ -1,0 +1,56 @@
+.game-area{
+    background-image: url('../../resources/basicTheme/background.png');
+    width: 450px;
+    height: 700px;
+    top: 60px;
+    left:35%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.game-area-dark{
+    background-image: url('../../resources/octiTheme/background.png');
+    width: 450px;
+    height: 700px;
+    top: 60px;
+    left:35%;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+#restart-button{
+    margin-top: 50px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-family: "Comic Sans MS";
+    font-size: 1.5rem;
+}
+
+#home-button-link{
+    position: absolute;
+    left: 125px;
+}
+#home-button{
+    margin-top: 50px;
+    border-radius: 10px;
+    font-family: "Comic Sans MS";
+    font-size: 1.5rem;
+    height: 50px;
+    width: 200px;
+}
+
+#restart-button-div{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    background-color: white;
+}
+.buttons-dark{
+    background-color: cornflowerblue;
+}

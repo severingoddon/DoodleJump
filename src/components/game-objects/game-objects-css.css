@@ -1,0 +1,83 @@
+.doodle-platform{
+    width: 85px;
+    height: 15px;
+    background-image: url('../../resources/basicTheme/platform.png');
+    position: absolute;
+}
+
+.doodle-platform-dark{
+    width: 85px;
+    height: 15px;
+    background-image: url('../../resources/octiTheme/platform.png');
+    position: absolute;
+}
+
+.doodle-platform-broken{
+    width: 85px;
+    height: 15px;
+    background-image: url('../../resources/basicTheme/brokenPlatform.png');
+    position: absolute;
+}
+
+.bomb{
+    width: 50px;
+    height: 49px;
+    background-image: url('../../resources/basicTheme/bomb.png');
+    position: absolute;
+}
+
+.trampoline{
+    width: 85px;
+    height: 40px;
+    background-image: url('../../resources/basicTheme/trampoline.png');
+    position: absolute;
+}
+
+.trampoline-dark{
+    width: 85px;
+    height: 40px;
+    background-image: url('../../resources/octiTheme/trampoline.png');
+    position: absolute;
+}
+
+.coin{
+    width: 35px;
+    height: 35px;
+    background-image: url('../../resources/basicTheme/coin.png');
+    position: absolute;
+}
+
+.doodle-platform-broken-destroyed{
+    width: 85px;
+    height: 30px;
+    background-image: url('../../resources/basicTheme/brokenPlatformDestroyed.png');
+    position: absolute;
+}
+
+.moving-platform{
+    width: 85px;
+    height: 15px;
+    background-image: url('../../resources/basicTheme/movingPlatform.png');
+    position: absolute;
+}
+
+.disappearing-platform{
+    width: 85px;
+    height: 15px;
+    background-image: url('../../resources/basicTheme/disapearingPlatform.png');
+    position: absolute;
+}
+
+.rocket{
+    width: 85px;
+    height: 43px;
+    background-image: url('../../resources/basicTheme/rocketPlatform.png');
+    position: absolute;
+}
+
+.rocket-dark{
+    width: 85px;
+    height: 43px;
+    background-image: url('../../resources/octiTheme/rocketPlatform.png');
+    position: absolute;
+}
